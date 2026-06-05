@@ -1,0 +1,15 @@
+---
+description: "Java Pulsar Messaging — Spring Pulsar configuration for Maven multi-module services"
+summary: >
+  Renders PulsarConfig.java into the server module's messaging package.
+  Consumed as a library by Java service archetypes.
+  Requires spring-pulsar-spring-boot-starter in the server module's pom.xml.
+authors: ["Jimmie Fulton <jimmie@ybor.ai>"]
+tags: ["library", "java", "messaging", "pulsar", "spring-pulsar"]
+
+requires:
+  archetect: "3.0.0"
+
+templating:
+  trim_blocks: true
+  lstrip_blocks: true
