@@ -1,0 +1,13 @@
+spring:
+  pulsar:
+    client:
+      service-url: ${MESSAGING_BROKER_URL:pulsar://localhost:6650}
+      authentication:
+        plugin-class-name: org.apache.pulsar.client.impl.auth.AuthenticationToken
+        param:
+          token: ${MESSAGING_JWT_TOKEN:}
+    producer:
+      topic-name: ${MESSAGING_TOPIC:{{ project-name }}}
+    consumer:
+      topics: ${MESSAGING_TOPIC:{{ project-name }}}
+      subscription-name: ${MESSAGING_SUBSCRIPTION_NAME:{{ project-name }}-sub}
